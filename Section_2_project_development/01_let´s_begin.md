@@ -1,5 +1,5 @@
 # Study Notes: Project Initialization
-##Setting Up for the Project
+## Setting Up for the Project
 Now that we have successfully connected our local computer to the Linux EC2 instance via SSH, it’s time to begin learning Linux commands.
 
 Before jumping into specific commands, let's first categorize them based on their functionality. This structured approach will help us understand Linux more effectively while working on our project.
