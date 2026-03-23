@@ -86,6 +86,44 @@ By default, Docker commands require sudo. To run Docker without sudo, add your u
 sudo usermod -aG docker $USER
 ```
 
+Now, log out and log back in, or run:
+
+```bash
+newgrp docker
+```
+
+Try running Docker without sudo:
+
+```bash
+docker run hello-world
+```
+If successful, you will see:
+
+```bash
+Hello from Docker!This message shows that your installation appears to be working correctly.
+```
+
+## 9. Test Docker Installation
+
+Run the following command to check if Docker is working:
+
+```bash
+docker run hello-world
+```
+
+This downloads a small test container and runs it.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
