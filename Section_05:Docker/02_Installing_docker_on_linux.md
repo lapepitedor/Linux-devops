@@ -100,7 +100,8 @@ docker run hello-world
 If successful, you will see:
 
 ```bash
-Hello from Docker!This message shows that your installation appears to be working correctly.
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
 ```
 
 ## 9. Test Docker Installation
