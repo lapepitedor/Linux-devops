@@ -17,25 +17,29 @@ sudo apt update && sudo apt upgrade -y
 ## 2. Install Required Dependencies
 
 ```bash
-sudo apt install apt-transport-https ca-certificates curl software-prope
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 ```
 
 ##  3. Add Docker’s Official GPG Key
 
 ```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg| sudo gpg --dea
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
 ## 4. Add Docker Repository
 
 ```bash
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyri
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
+https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 ## 5. Install Docker
 
 ```bash
-sudo apt updatesudo apt install docker-ce docker-ce-cli containerd.io -y
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io -y
 ```
 
 ## 6. Verify Docker Installation
